@@ -36,7 +36,7 @@ class NeuronOmniIoNodeTest : public rclcpp::Node
 	//std::shared_ptr<NeuronGpio> gpio_sw_contact_, gpio_sw_onoff_;
     void topic_callback(const std_msgs::msg::String::SharedPtr msg)
     {
-        msg;
+        (void)msg;
         return;
     }
 

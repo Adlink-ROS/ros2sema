@@ -28,7 +28,10 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
-find_package(libsema REQUIRED)
+find_package(sema_vendor REQUIRED)
+if (sema_vendor_FOUND)
+  find_package(libsema REQUIRED)
+endif()
 
 # Add include directories
 include_directories(
@@ -41,7 +44,7 @@ add_executable(neuron_demo_gpio
   src/main.cpp
   src/neuronGpioNode.cpp
   src/neuronGpio.cpp)
-target_link_libraries(neuron_demo_gpio semaeapi sema sema_hwlinux EApi_1 log4cpp)
+target_link_libraries(neuron_demo_gpio semaeapi)
 ament_target_dependencies(neuron_demo_gpio
   rclcpp
   std_msgs)
