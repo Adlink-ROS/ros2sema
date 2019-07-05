@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format2.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="2">
+  <name>sema_gpio</name>
+  <version>0.0.1</version>
+  <description>Toolset for interfacing SEMA's GPIO</description>
+  <author email="alan.chen@adlinktech.com">Alan Chen</author>
+  <author email="f039281310@yahoo.com.tw">Ewing Kang</author>
+  <author email="chester.tseng@adlinktech.com">YuSheng Tseng</author>
+  <maintainer email="chester.tseng@adlinktech.com">YuSheng Tseng</maintainer>
+  <license>Apache License 2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <build_depend>rclcpp</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>libsema</build_depend>
+
+  <exec_depend>rclcpp</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
