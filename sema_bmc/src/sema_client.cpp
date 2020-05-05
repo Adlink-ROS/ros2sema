@@ -31,7 +31,8 @@ int main(int argc, char *argv[]) {
     // Build the request
     auto request = std::make_shared<sema_bmc::srv::SemaCmd::Request>();
     request->cmd = (argc >= 2)?argv[1]:"info";
-    request->param = (argc >= 3)?atoi(argv[2]):0;
+    request->sub_cmd = (argc >= 3)?argv[2]:"cpu";
+    request->param = (argc >= 4)?atoi(argv[3]):0;
 
     // Waiting until the service is up
     while (!client->wait_for_service(1s)) {

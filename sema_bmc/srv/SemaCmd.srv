@@ -1,5 +1,6 @@
 string cmd
+string sub_cmd
 uint32 param
 ---
-uint32 ret
+int32 ret
 uint32 result

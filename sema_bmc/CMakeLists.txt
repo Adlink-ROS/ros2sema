@@ -42,6 +42,7 @@ add_library(server_lib SHARED
 ament_target_dependencies(server_lib
   "rclcpp"
   "rclcpp_components")
+target_link_libraries(server_lib semaeapi)
 rosidl_target_interfaces(server_lib ${PROJECT_NAME} "rosidl_typesupport_cpp")
 rclcpp_components_register_node(server_lib
   PLUGIN sema_server_node::SemaServerNode
