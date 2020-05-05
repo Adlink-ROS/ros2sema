@@ -1,0 +1,5 @@
+string cmd
+uint32 param
+---
+uint32 ret
+uint32 result
