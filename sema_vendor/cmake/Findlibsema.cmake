@@ -9,15 +9,15 @@ include(FindPackageHandleStandardArgs)
 set(sema_bsp_path $ENV{SEMA_BSP_PATH})
 
 if (NOT sema_bsp_path)
-  message(WARNING "Can not found SEMA BSP path")
-  return()
+  # Can not find SEMA_BSP_PATH, so set to /opt/sema
+  set(sema_bsp_path /opt/sema)
 endif()
 
 # TODO(cwyark) Should identify what we arch we are in.
 set(HOST_ARCH linux64)
 
 set(libsema_INCLUDE_DIR ${sema_bsp_path}/include)
-set(libsema_LIBRARY_DIR ${sema_bsp_path}/lib/${HOST_ARCH})
+set(libsema_LIBRARY_DIR ${sema_bsp_path}/binary/${HOST_ARCH}/lib)
 
 if (libsema_INCLUDE_DIR AND libsema_LIBRARY_DIR)
 
